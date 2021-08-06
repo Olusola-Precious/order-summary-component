@@ -1,0 +1,146 @@
+$paleBlue: hsl(225, 100%, 94%);
+$brightBlue: hsl(245, 75%, 52%);
+$hover-brightBlue: hsla(245, 69%, 63%, 0.877);
+$very-paleBlue: hsl(225, 100%, 98%);
+$desaturatedBlue:hsl(224, 23%, 55%);
+$darkBlue:hsl(223, 47%, 23%);
+$white:hsl(0, 0%, 100%);
+// font:{
+//     family: 'Red Hat Display', sans-serif;
+//     size: 16px;
+//     color: $darkBlue;
+// }
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $paleBlue;
+    background-image: url('../images/pattern-background-desktop.svg');
+    // background-position: 0% -35%;
+    //background-position-x: center;
+    //background-position-y: -25px;
+    background-repeat: no-repeat;
+    //@include font();
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    color: $darkBlue;
+    @media (max-width: 999px) {
+        display: block;
+    }
+}
+
+.card {
+    width: 400px;
+    // padding: 20px;
+    border-radius: 10px;
+    background: $white;
+    display: block;
+    @media (max-width: 999px) {
+        margin: 10px auto;
+    }
+    @media (max-width: 540px) {
+        width: 90%;
+        margin: 40px auto;
+    }
+    .card__img {
+        height: 210px;
+        width: 100%;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        background-image: url('../images/illustration-hero.svg');
+        // text-align: center;
+        // & img {
+        //     width: calc(100% - 12px);
+        // }
+    }
+    .card__content {
+        padding: 20px;
+        margin: 0 20px;
+        text-align: center;
+        h2 {
+            font-weight: 900;
+        }
+        p {
+            color: $desaturatedBlue;
+        }
+        .card__charge {
+            background: $very-paleBlue;
+            padding: 20px 0;
+            margin: 1.3rem 0;
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            //grid-auto-rows: minmax(min-content, max-content);
+            gap: 1rem;
+            .icon {
+                background-image: url('../images/icon-music.svg');
+                //background-color: $paleBlue;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            & div.price {
+                text-align: left;
+                & small {
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: $desaturatedBlue;
+                }
+            }
+            & a {
+                align-self: center;
+                color: $brightBlue;
+                font-size: 12px;
+                font-weight: 700;
+                &:hover {
+                    text-decoration: none;
+                    color: $hover-brightBlue;
+                }
+            }
+        }
+        & button {
+            display: block;
+            //margin: 10px auto;
+            margin: 10px auto;
+            border: none;
+            background: none;
+            // @include font();
+            font-family: 'Red Hat Display', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        & .card__proceed {
+            width: 100%;
+            //margin: 10px auto 10px auto;
+            background: $brightBlue;
+            padding: 10px;
+            border-radius: 5px;
+            color: $white;
+            &:hover {
+                background: $hover-brightBlue;
+            }
+        }
+        & .card__cancle {
+            margin: 1rem auto;
+            color: $desaturatedBlue;
+            &:hover {
+                color: $darkBlue;
+            }
+        }
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
