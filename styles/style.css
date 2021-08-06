@@ -17,6 +17,7 @@ body {
 @media (max-width: 999px) {
   body {
     display: block;
+    /* Removed Overflow so that the Attribution can show*/
   }
 }
 
@@ -34,7 +35,7 @@ body {
 @media (max-width: 540px) {
   .card {
     width: 90%;
-    margin: 40px auto;
+    margin: 10px auto;
   }
 }
 .card .card__img {

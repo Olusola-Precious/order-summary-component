@@ -31,6 +31,8 @@ body {
     color: $darkBlue;
     @media (max-width: 999px) {
         display: block;
+        /* Removed Overflow so that the Attribution can show*/
+        //        overflow: hidden;
     }
 }
 
@@ -45,7 +47,7 @@ body {
     }
     @media (max-width: 540px) {
         width: 90%;
-        margin: 40px auto;
+        margin: 10px auto;
     }
     .card__img {
         height: 210px;
